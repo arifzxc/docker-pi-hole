@@ -144,6 +144,16 @@ Masuk menu:
 - Adlists > tambahkan address: https://dbl.oisd.nl/ > Add
 - Tools > Update Gravity > Update (tunggu sampai <b>Success!</b>)
 
+## Setting mikrotik supaya tetap memakai ip router terlebih dahulu, dan kemudian memakai ip pihole.
+
+```
+ip firewall nat add chain=dstnat protocol=tcp port=53 in-interface=ether3_network action=dst-nat to-addresses=192.168.1.1 to-ports=53
+```
+```
+ip firewall nat add chain=dstnat protocol=udp port=53 in-interface=ether3_network action=dst-nat to-addresses=192.168.1.1 to-ports=53
+```
+
+
 
 Selesai.
 
