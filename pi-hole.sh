@@ -1,10 +1,11 @@
+#!/bin/bash
 # Masuk sebagai superuser (root) terlebih dahulu, agar mempermudah proses installasi. 
 
 wget https://download.docker.com/linux/debian/gpg
 apt-key add gpg
 cd /etc/apt/sources.list.d/
 touch /etc/apt/sources.list.d/docker.list
-echo deb [arch=arm64] https://download.docker.com/linux/debian bullseye stable > docker.list
+echo "deb [arch=arm64] https://download.docker.com/linux/debian bullseye stable" > docker.list
 cd 
 sudo apt update -y
 
